@@ -55,7 +55,6 @@ export default function Hook() {
         setPerson(newPerson);
         setLoading(false);
 
-        // Save to localStorage for history
         const history = JSON.parse(localStorage.getItem("personHistory") || "[]");
         history.unshift(newPerson);
         localStorage.setItem("personHistory", JSON.stringify(history.slice(0, 10))); // Keep only the last 10 entries
